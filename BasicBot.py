@@ -223,6 +223,7 @@ def CleanURL(strText):
 
 def CheckMAL(strQuery):
     strSearch = strQuery
+    # replace spaces with '+'
     strQuery = strQuery.replace(" ", "+")
     strQuery = "https://myanimelist.net/search/all?q=" + strQuery
     page = Sessions.get(strQuery)
