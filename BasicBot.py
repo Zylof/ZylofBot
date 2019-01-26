@@ -24,7 +24,7 @@ CURRENTFOLDERDIR = os.getcwd()
 
 #############################
 
-#testing4
+#testing5
 # Import settings from different file
 sys.path.append(CURRENTFOLDERDIR)
 
