@@ -1,5 +1,6 @@
 #Discord Bot
 localvar.py
+RikaLaunch.bat
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -26,6 +27,7 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+RikaLaunch/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template

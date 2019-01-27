@@ -24,6 +24,14 @@ CURRENTFOLDERDIR = os.getcwd()
 
 #############################
 
+
+#Stuff for launching Rika automatically
+pid = str(os.getpid())
+pidfile = "RikaLaunch\RikaPID"
+RPID = open(pidfile,"w")
+RPID.write(pid)
+RPID.flush()
+
 #testing7
 # Import settings from different file
 sys.path.append(CURRENTFOLDERDIR)
