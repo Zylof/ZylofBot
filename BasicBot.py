@@ -17,6 +17,7 @@ import pyimgur
 import requests
 from lxml import etree, html
 from subprocess import call
+import subprocess
 
 #############################
 CURRENTFOLDERDIR = os.getcwd()
@@ -30,8 +31,8 @@ pid = str(os.getpid())
 pidfile = "RikaLaunch\RikaPID"
 RPID = open(pidfile,"w")
 RPID.write(pid)
-RPID.close
 RPID.flush()
+RPID.close()
 
 #testing8
 # Import settings from different file
@@ -968,7 +969,8 @@ async def on_message(message):
                 choice = random.choice(STRINGS.LIST_IMAGINE)
                 await client.send_message(message.channel, choice)
             elif message.content == "-reboot":
-                call("C:\Program Files (x86)\Jenkins\workspace\Discord Bot Git Update\RikaLaunch.bat")
+                subprocess.call([r'C:\Program Files (x86)\Jenkins\workspace\Discord Bot Git Update\RikaLaunch.bat'])
+                ##call("C:\Program Files (x86)\Jenkins\workspace\Discord Bot Git Update\RikaLaunch.bat")
             elif message.content[:4] == "-mal":
                 # search MAL for something
                 print("Accepted command: " + message.content)
