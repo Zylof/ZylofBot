@@ -16,7 +16,7 @@ import discord
 import pyimgur
 import requests
 from lxml import etree, html
-
+from subprocess import call
 
 #############################
 CURRENTFOLDERDIR = os.getcwd()
@@ -30,6 +30,7 @@ pid = str(os.getpid())
 pidfile = "RikaLaunch\RikaPID"
 RPID = open(pidfile,"w")
 RPID.write(pid)
+RPID.close
 RPID.flush()
 
 #testing8
@@ -966,6 +967,8 @@ async def on_message(message):
             elif message.content == "-imagine":
                 choice = random.choice(STRINGS.LIST_IMAGINE)
                 await client.send_message(message.channel, choice)
+            elif message.content == "-reboot":
+                call("C:\Program Files (x86)\Jenkins\workspace\Discord Bot Git Update\RikaLaunch.bat")
             elif message.content[:4] == "-mal":
                 # search MAL for something
                 print("Accepted command: " + message.content)
