@@ -32,7 +32,7 @@ RPID = open(pidfile,"w")
 RPID.write(pid)
 RPID.flush()
 
-#testing7
+#testing8
 # Import settings from different file
 sys.path.append(CURRENTFOLDERDIR)
 
